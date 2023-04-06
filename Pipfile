@@ -11,6 +11,8 @@ djangorestframework-jsonapi = "*"
 drf-spectacular = "*"
 drf-yasg = "*"
 djangorestframework-simplejwt = "*"
+django-heroku = "*"
+gunicorn = "*"
 
 [dev-packages]
 
