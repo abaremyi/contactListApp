@@ -13,6 +13,7 @@ drf-yasg = "*"
 djangorestframework-simplejwt = "*"
 django-heroku = "*"
 gunicorn = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication',
     'contacts',
-    'drf_yasg'
+    'drf_yasg',
+    'corsheaders'
 ]
 
 REST_FRAMEWORK = {
@@ -66,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -138,6 +140,12 @@ USE_TZ = True
 #         'rest_framework_simplejwt.authentication.JWTAuthentication',
 #     ],
 # }
+
+# CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:3001"
+]
 
 #JWT
 JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
